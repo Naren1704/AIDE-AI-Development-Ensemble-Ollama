@@ -14,24 +14,43 @@ AIDE (AI Development Ensemble) is an innovative framework where specialized AI a
 ## 🏗️ Architecture Overview
 
 AIDE-V2-DEMO/
+
 ├── 🎯 Agent Server (Backend)
+
 │ ├── Orchestrator - Routes messages between agents
+
 │ ├── Requirements Evolver - Understands project goals
+
 │ ├── UX Architect - Designs user experience flows
+
 │ ├── UI Designer - Creates visual design specifications
+
 │ ├── Frontend Engineer - Handles technical implementation
+
 │ ├── Data Architect - Designs data structures
+
 │ ├── API Designer - Creates backend APIs
+
 │ └── DevOps - Plans deployment strategies
+
 ├── 🌐 Web UI (Frontend)
+
 │ ├── Vue.js 3 with Vite
+
 │ ├── Real-time chat interface
+
 │ ├── Live code preview
+
 │ └── File explorer
+
 └── 🔧 Project Builder
+
 ├── Generates complete Flask applications
+
 ├── Manages preview servers
+
 └── Validates and integrates generated code
+
 
 ## 🎯 Multi-Agent Specialization
 
@@ -80,12 +99,10 @@ AIDE-V2-DEMO/
 ### Installation
 
 1. **Clone the Repository**
-   ```bash
    git clone https://github.com/your-username/AIDE-AI-Development-Ensemble.git
    cd AIDE-AI-Development-Ensemble
 Backend Setup
 
-bash
 # Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -94,13 +111,11 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 Frontend Setup
 
-bash
 cd web-ui
 npm install
 cd ..
 Ollama Setup
 
-bash
 # Install Ollama (if not already installed)
 # Visit: https://ollama.ai/
 
@@ -108,17 +123,14 @@ bash
 ollama pull llama2
 Configuration
 
-bash
 # Edit config/settings.py with your preferred model
 OLLAMA_MODEL = "llama2"  # or your preferred model
 Running AIDE
 Start the Backend Server
 
-bash
 python run.py
 Start the Frontend (in a new terminal)
 
-bash
 cd web-ui
 npm run dev
 Access AIDE
@@ -183,32 +195,57 @@ codellama (recommended for code generation)
 Any other Ollama-supported model
 
 📁 Project Structure
-text
+
 AIDE-AI-Development-Ensemble/
+
 ├── run.py                          # Main application entry point
+
 ├── config/
+
 │   └── settings.py                 # Configuration settings
+
 ├── agent-server/
+
 │   ├── main.py                     # WebSocket server
+
 │   ├── agents/
+
 │   │   ├── orchestrator.py         # Agent coordination
+
 │   │   └── integration_agent.py    # Code generation
+
 │   ├── services/
+
 │   │   └── project_builder.py      # Project building logic
+
 │   └── storage/
+
 │       └── local_storage.py        # Project data storage
+
 └── web-ui/
+
     ├── src/
+    
     │   ├── App.vue                 # Main Vue component
+    
     │   ├── stores/
+    
     │   │   └── project-store.js    # State management
+    
     │   ├── services/
+    
     │   │   └── agent-service.js    # WebSocket communication
+    
     │   └── components/
+    
     │       ├── ChatInterface.vue   # Chat UI
+    
     │       ├── AgentStatus.vue     # Agent indicators
+    
     │       ├── LivePreview.vue     # Project preview
+    
     │       └── FileExplorer.vue    # File browser
+    
     └── package.json
     
 🎯 Use Cases
@@ -305,7 +342,8 @@ ollama list
 
 # Restart Ollama service
 ollama serve
-Port Conflicts
+
+# Port Conflicts
 
 # Check available ports
 lsof -i :8765  # WebSocket port
